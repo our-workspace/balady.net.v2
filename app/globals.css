@@ -1,0 +1,436 @@
+/* app/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* تحسينات الأداء والتنقل */
+.performance-optimized {
+  /* تحسين الرسوم المتحركة */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  /* تحسين التمرير */
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+
+.navigation-optimized {
+  /* تحسين التنقل */
+
+
+}
+
+.navigation-smooth {
+  /* انتقالات سلسة */
+  transition: opacity 0.15s ease-in-out;
+}
+
+.scroll-optimized {
+  /* تحسين التمرير */
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* تحسين الصور */
+img {
+  /* تحسين تحميل الصور */
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px;
+}
+
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
+/* تحسين الأزرار والروابط */
+button,
+a {
+  /* تحسين الاستجابة */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* تحسين البطاقات */
+.card-optimized {
+  /* تحسين الرسوم المتحركة */
+  will-change: transform, box-shadow;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* تحسين الجداول */
+table {
+  /* تحسين العرض */
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* تحسين النماذج */
+input,
+textarea,
+select {
+  /* تحسين الأداء */
+  will-change: auto;
+}
+
+/* تحسين الشبكة */
+.grid-optimized {
+  /* تحسين الشبكة */
+  contain: layout style paint;
+}
+
+/* تحسين الحاويات */
+.container-optimized {
+  /* تحسين الحاوية */
+  contain: layout style;
+  content-visibility: auto;
+}
+
+/* تحسين الانتقالات */
+.transition-optimized {
+  /* انتقالات محسنة */
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* تحسين التحميل */
+.loading-optimized {
+  /* تحسين شاشات التحميل */
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* تحسين الخطوط */
+@font-face {
+  font-family: "Cairo";
+  src: url("/fonts/Cairo-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/fonts/Cairo-VariableFont_slnt_wght.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'hel';
+  src: url("/fonts/Helvetica.ttf");
+  font-style: normal;
+  font-display: swap;
+  /* لتحسين عرض الخط أثناء التحميل */
+}
+
+@font-face {
+  font-family: 'JN';
+  src: url('/fonts/jn.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url("/fonts/static/NotoKufiArabic-SemiBold.ttf") format('truetype');
+  font-weight: 600;
+  /* SemiBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url("/fonts/static/NotoKufiArabic-Medium.ttf") format('truetype');
+  font-weight: 500;
+  /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url("/fonts/static/NotoKufiArabic-Regular.ttf") format('truetype');
+  font-weight: 400;
+  /* Regular / Normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url("/fonts/static/NotoKufiArabic-Light.ttf") format('truetype');
+  font-weight: 300;
+  /* Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url("/fonts/static/NotoKufiArabic-ExtraLight.ttf") format('truetype');
+  font-weight: 200;
+  /* ExtraLight */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url("/fonts/static/NotoKufiArabic-Thin.ttf") format('truetype');
+  font-weight: 100;
+  /* Thin */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Doto';
+  src: url("/fonts/static/NotoKufiArabic-Bold.ttf");
+  font-weight: normal;
+  /* أو bold حسب الخط */
+  font-style: normal;
+  font-display: swap;
+  /* لتحسين عرض الخط أثناء التحميل */
+}
+
+@font-face {
+  font-family: 'Somar';
+  src: url("/fonts/somar-regular.otf-webfont.woff2") format("woff2"),
+       url("/fonts/somar-regular.otf-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+}
+
+/* تحسين الاستجابة */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* تحسين الطباعة */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* تحسين الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .mobile-optimized {
+    /* تحسين الهواتف */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* تحسين الشاشات الكبيرة */
+@media (min-width: 1024px) {
+  .desktop-optimized {
+    /* تحسين أجهزة الكمبيوتر */
+    contain: layout style paint;
+  }
+}
+
+/* تحسين الألوان الداكنة */
+@media (prefers-color-scheme: dark) {
+  .dark-optimized {
+    /* تحسين الوضع الداكن */
+    color-scheme: dark;
+  }
+}
+
+/* تحسين الذاكرة */
+.memory-optimized {
+  /* تحسين استخدام الذاكرة */
+  contain: strict;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Cairo font class */
+.Cairo {
+  font-family: "Cairo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+}
+
+.font-hel {
+  /* أضف هذه الفئة */
+  font-family: 'hel', sans-serif;
+  font-weight: 400;
+}
+
+.font-hel-sm {
+  /* أضف هذه الفئة */
+  font-family: 'hel', sans-serif;
+  font-weight: 700;
+}
+
+.font-noto-thin {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 100;
+}
+
+.font-noto-extralight {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 200;
+}
+
+.font-noto-light {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 300;
+}
+
+.font-noto-regular {
+  /* أو .font-noto-normal */
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 400;
+
+}
+
+.font-noto-medium {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 500;
+}
+
+.font-noto-semibold {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 600;
+}
+
+.font-doto {
+  /* أضف هذه الفئة */
+  font-family: 'Doto', sans-serif;
+}
+
+
+/* إصلاح قائمة الهيدر بحيث لا تُخفى بـ visibility */
+.mainHeader .navbar-collapse {
+  visibility: visible !important;
+}
+
+/* عناصر البحث والإعدادات في أسفل القائمة - للموبايل */
+.mobile-menu-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.mobile-menu-footer .header-search-mobile a,
+.mobile-menu-footer .webAccessability-ddl-mobile a {
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-footer .header-search-mobile a:hover,
+.mobile-menu-footer .webAccessability-ddl-mobile a:hover {
+  opacity: 0.8;
+}
+
+.mobile-menu-footer .header-search-mobile a i,
+.mobile-menu-footer .webAccessability-ddl-mobile a i {
+  display: block;
+}
+
+.mobile-menu-footer .header-search-mobile a span,
+.mobile-menu-footer .webAccessability-ddl-mobile a span {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+
+/* إخفاء عناصر الديسكتوب في الموبايل */
+@media (max-width: 991.98px) {
+  .header-left {
+    display: none !important;
+  }
+}
+
+/* إظهار عناصر الديسكتوب في الشاشات الكبيرة */
+/* إظهار عناصر الديسكتوب في الشاشات الكبيرة */
+@media (min-width: 992px) {
+  .mobile-menu-footer {
+    display: none !important;
+  }
+}
+
+/* تحسين ألوان الهيدر عند التمرير */
+.site-header.scrolled .menu-item a span,
+.site-header.scrolled .search-link i,
+.site-header.scrolled .search-link span,
+.site-header.scrolled .webAccessability-ddl a i,
+.site-header.scrolled .webAccessability-ddl a span,
+.site-header.scrolled .navbar-brand,
+.site-header.scrolled .mobile-menu-footer a i,
+.site-header.scrolled .mobile-menu-footer a span {
+  color: #004d40 !important; /* لون أخضر داكن */
+}
+
+/* في حالة وجود خيار لتغيير اللوجو أيضاً */
+.site-header.scrolled .logo {
+  filter: invert(1) brightness(0.5); /* عكس لون اللوجو الأبيض ليصبح داكن */
+}
+
+/* Mobile Menu Footer Styling */
+@media (max-width: 991.98px) {
+  .mobile-menu-footer {
+      display: flex !important; /* Force display on mobile */
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      margin-top: 10px;
+  }
+}
+
+.site-header.scrolled .mobile-menu-footer {
+    border-top: none;
+    background-color: #f7f7f7;   /* Light gray background matching reference */
+    margin: 15px;                /* Gap from edges */
+    padding: 15px 0;             /* Vertical padding */
+    border-radius: 5px;          /* Minimal rounding like reference */
+}
+
+/* Force white color for icons in fixed/transparent header (default state) */
+.site-header:not(.scrolled) .mobile-menu-footer a i,
+.site-header:not(.scrolled) .mobile-menu-footer a span,
+.site-header:not(.scrolled) .search-link i,
+.site-header:not(.scrolled) .search-link span,
+.site-header:not(.scrolled) .webAccessability-ddl a i,
+.site-header:not(.scrolled) .webAccessability-ddl a span {
+    color: #ffffff !important;
+}
+
+/* Increase font size in certificate input fields */
+.form-control {
+    font-size: 13px !important;
+}
